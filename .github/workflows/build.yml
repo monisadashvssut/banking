@@ -32,5 +32,7 @@ jobs:
     - name: Application build test
       run: ls target
 
-    - name: Build Docker Image
-      run: docker build -t monisa123/banking:1.0.0 .
+    - name: Build Docker Image & Push
+      run: |
+           docker build -t monisa123/banking:1.0.0 .
+           docker push monisa123/banking:1.0.0
