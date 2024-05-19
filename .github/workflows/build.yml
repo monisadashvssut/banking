@@ -41,4 +41,4 @@ jobs:
     - name: Connect to K8s Cluster
       run: |
            export KUBECONFIG=admin.conf
-           kubectl get nodes
+           kubectl get nodes --insecure-skip-tls-verify
