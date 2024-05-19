@@ -35,7 +35,7 @@ jobs:
               -Dsonar.projectKey=banking \
               -Dsonar.projectName='banking' \
               -Dsonar.host.url=http://122.179.31.137:9000 \
-              -Dsonar.token=sqp_9947a856755f64d3823e59c0ffd5d36a1f0afda7
+              -Dsonar.token=${{ secrets.SONARQUBE_PASSWORD }}
 
     - name: Build Docker Image & Push
       run: |
