@@ -42,3 +42,4 @@ jobs:
       run: |
            export KUBECONFIG=admin.conf
            kubectl get nodes --insecure-skip-tls-verify
+           kubectl apply -f myapp.yaml
