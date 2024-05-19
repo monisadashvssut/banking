@@ -40,5 +40,5 @@ jobs:
 
     - name: Connect to K8s Cluster
       run: |
-           export kubeconfig=admin.conf
+           export KUBECONFIG=admin.conf
            kubectl get nodes
