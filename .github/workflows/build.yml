@@ -8,11 +8,7 @@
 
 name: Build CI
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: workflow_dispatch
   
 jobs:
   build:
@@ -44,7 +40,7 @@ jobs:
     - name: Build Docker Image & Push
       run: |
            docker build -t monisa123/banking:1.0.0 .
-           docker login -u monisa123 -p Monisa@1999
+           docker login -u monisa123 -p ${{ secrets.DOCKER_PASSWORD }}
            docker push monisa123/banking:1.0.0
 
     - name: Connect to K8s Cluster
