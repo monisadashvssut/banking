@@ -1,4 +1,4 @@
 FROM openjdk:17-jdk-alpine
-MAINTAINER Monisha
+MAINTAINER Monisa
 COPY target/*.jar cards.jar
 ENTRYPOINT ["java -jar cards.jar"]
