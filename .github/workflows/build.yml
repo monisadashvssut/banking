@@ -34,7 +34,7 @@ jobs:
            mvn clean verify sonar:sonar \
               -Dsonar.projectKey=banking \
               -Dsonar.projectName='banking' \
-              -Dsonar.host.url=http://122.179.31.137:9000 \
+              -Dsonar.host.url=http://122.179.31.199:9000 \
               -Dsonar.token=${{ secrets.SONARQUBE_PASSWORD }}
 
     - name: Build Docker Image & Push
