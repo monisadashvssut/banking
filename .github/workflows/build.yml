@@ -37,3 +37,8 @@ jobs:
            docker build -t monisa123/banking:1.0.0 .
            docker login -u monisa123 -p Monisa@1999
            docker push monisa123/banking:1.0.0
+
+    - name: Connect to K8s Cluster
+      run: |
+           export kubeconfig=admin.conf
+           kubectl get nodes
